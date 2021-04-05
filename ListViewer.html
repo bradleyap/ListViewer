@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>List viewer tool</title>
+        <meta name="description" content="A viewer application that can sort and filter items">
+        <link rel="stylesheet" type="text/css" href="css/ListViewer.css">       
+        <script type="text/javascript" src="js/HttpComm.js"></script>
+        <script type="text/javascript" src="js/ListViewer.js"></script>
+    </head>
+    <body>
+        <div id="popup-location"></div>
+        <div id="content-area">
+            <div id="menu">
+                <div class="menuitem" id="c1">Show details</div>
+                <div class="menuitem" id="c2">Hide details</div>
+                <div class="menuitem" id="c3">Sort...</div>
+                <div class="menuitem" id="c4">Filter...</div>
+            </div>
+            <div id="data-area"></div>
+        </div>
+        <!-- when JavaScript is not enabled, display message that it's required -->
+        <h2 class="message-item" id="js-support-message">This web page requires that JavaScript is enabled. Please enable JavaScript in your browser to continue.</h2>
+        <script>
+//JavaScript has been enabled so hide notification
+document.getElementById('js-support-message').style.display = 'none';
+
+//inialize list viewer
+initializeViewer();
+        </script>
+    </body>
+</html>
